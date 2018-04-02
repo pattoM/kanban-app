@@ -1,26 +1,30 @@
-{% extends "bootstrap/base.html" %}
+
+{% extends "header-footer-base.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
 
-{% block title %}
-register
-{% endblock %}
 
-{% block styles %}
+
 {{super()}}
-<link rel="stylesheet" href="{{url_for('.static', filename='main.css')}}">
-{% endblock %}
-
 {% block content %}
-<div class="container">
+<body>
+  <div class="index-container">
+    <div class="container">
 
-  <form class="form-signin" method="POST" action="/signup">
-    <h2 class="form-signin-heading">Create account</h2>
-    {{ form.hidden_tag() }}
-    {{ wtf.form_field(form.username) }}
-    {{ wtf.form_field(form.email) }}
-    {{ wtf.form_field(form.password) }}
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
-  </form>
+    <form class="form-signin" method="POST" action="/signup">
+      <h2 class="form-signin-heading">Create account </h2><br/>
+      {{ form.hidden_tag() }}
+      {{ wtf.form_field(form.username) }}
+      {{ wtf.form_field(form.email) }}
+      {{ wtf.form_field(form.password) }}
+      <button class="signup-btn" type="submit">Sign Up</button>
+      <br/><br/>
+      <h3>Already have an account? <a href="{{url_for('login')}}">LOGIN HERE</a></h3>
+    </form>
 
-</div> <!-- /container -->
+  </div> <!-- /container -->
+  <footer>
+    &copy; 2018 Smooth Kanban || Designed by Pacman
+  </footer>
+</div>
+</body>
 {% endblock %}

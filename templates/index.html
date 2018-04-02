@@ -1,30 +1,26 @@
 
-{% extends "bootstrap/base.html" %}
-{% import "bootstrap/wtf.html" as wtf %}
-
-{% block title %}
-My Dashboard
-{% endblock %}
-
-{% block styles %}
-{{super()}}
-<link rel="stylesheet" href="{{url_for('.static', filename='main.css')}}">
-{% endblock %}
+{% extends "header-footer-base.html" %}
 
 {% block content %}
 
-
-
-
 <body>
-  <div style="text-align: center;">
-    <h1> Welcome to Kanban </h1>
-    <h2> The key to more productivity is here. Try it now! </h2>
-  
+  <div class="index-container">
+    <h1> SMOOTH KANBAN </h1><br/><br/>
+    <h2> Manage your tasks more efficiently. Try it now! </h2>
+    <br/>
+    <div class="cust-btn">
+      <a href="{{url_for('register')}}">SIGNUP</a>
+    </div>
+    <div class="cust-btn">
+      <a href="{{url_for('login')}}">LOGIN</a>
+    </div>
+
+    <footer>
+      &copy; 2018 Smooth Kanban || Designed by Pacman
+    </footer>
   </div>
 
-</body>
-</html>
 
+</body>
 
 {% endblock %}

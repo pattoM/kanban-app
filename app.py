@@ -80,16 +80,16 @@ def register():
         db.session.add(new_member)
         db.session.commit()
 
-        return '<h2> The account with email' + form.email.data + 'has been created </h2>'
+        return redirect(url_for('login'))
     return render_template('register.html', form=form)
 
 
 @app.route('/dashboard', methods=['GET', 'POST'])
 @login_required
 def dashboard():
-    todo = Task.query.filter_by(status='todo').all()
-    doing = Task.query.filter_by(status='doing').all()
-    done = Task.query.filter_by(status='done').all()
+    todo = Task.query.filter_by(status='todo', id=current_user.id).all()
+    doing = Task.query.filter_by(status='doing', id=current_user.id).all()
+    done = Task.query.filter_by(status='done',id=current_user.id).all()
     return render_template('kanban-board.html', name = current_user.username, todo = todo, doing=doing, done=done)
 
 @app.route('/addtask', methods=['GET','POST'])
