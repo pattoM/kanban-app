@@ -23,10 +23,10 @@ footer{
   position: absolute;
   bottom: 10px;
   left: 38%;
-  border-top: 2px solid white;
+  border-top: 2px solid #ffc107;
 }
 .cust-btn{
-  border:1px solid #ffffff;
+  border:1px solid #ffc107;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   width: max-content;
@@ -68,7 +68,7 @@ footer{
 .signup-btn{
   background-color: #053684;
   color:white;
-  border: 2px solid #ffffff;
+  border: 2px solid #ffc107;
   border-radius: 6px;
   padding:5px;
   margin-left: 12px;
@@ -76,4 +76,88 @@ footer{
 }
 #remember{
   padding: 8px;
+}
+
+.index-container-dash{
+  background-color: rgba(0, 14, 35, 0.70);
+  width: 100%;
+  overflow: show;
+  padding: 15px;
+  position: absolute;
+  bottom: 0px;
+  top:0px;
+}
+#logout-btn{
+  text-align:center;
+  margin: 14px;
+  margin-bottom: 8px;
+  border: 1.5px solid black;
+  background-color: #b71c1c;
+  font-size: 12px;
+  text-decoration: none;
+  padding: 3px;
+  border-radius: 3px;
+}
+.sign-align{
+  position: absolute;
+  right: 20px;
+}
+
+#dash-title{
+  color: #ffc107;
+}
+.row{
+
+}
+.col{
+  float: left;
+  width: 32%;
+  margin:2px;
+  border-radius: 8px;
+  height:350px;
+  overflow: auto;
+  border: 1.5px solid #ffc107;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#topbar{
+  background-color: rgba(0, 14, 35, 0.9);
+  padding: 25px;
+  margin-right: 6px;
+  margin-bottom: 16px;
+}
+.col h3{
+  padding: 6px;
+  text-align: center;
+}
+.index-container h1{
+  color: #ffc107;
+}
+.form-signin-heading{
+  color: #ffc107;
+}
+.board-item{
+  border: 1px solid #ffffff;
+  margin: 4px;
+  padding: 3px;
+  text-transform: capitalize;
+}
+.board-item a{
+  font-size: 10.5px;
+}
+.des{
+  font-size: 13px;
+  color: ;
+}
+.task-submit{
+  border: 2px solid #ffc107;
+  background-color: #053684;
+  border-radius: 3.5px;
+  padding: 3px;
+  margin-left: 8px;
+  font-weight: bold;
+  color: white;
 }
