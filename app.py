@@ -80,7 +80,7 @@ def register():
         db.session.add(new_member)
         db.session.commit()
 
-        return '<h2> The account with email' + form.email.data + 'has been created </h2>'
+        return redirect(url_for('login'))
     return render_template('register.html', form=form)
 
 
