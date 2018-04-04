@@ -10,10 +10,10 @@ The python version is 3x
 
 *Project Structure*
 Templates
-..*kanban-board.html
-..*login.html
-..*register.html
-..*header-footer-base.html
+- kanban-board.html
+- login.html
+- register.html
+- header-footer-base.html
 
 app.py
 database.db
