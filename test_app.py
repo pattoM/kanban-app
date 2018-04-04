@@ -1,4 +1,5 @@
 #run with: python -m unittest -v
+#delete the db on subsequent runs or make entirely new names for the register function
 
 import os
 import unittest
